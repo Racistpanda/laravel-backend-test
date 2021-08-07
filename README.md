@@ -1,30 +1,30 @@
-Run docker
+Run docker:
 ```sh
 docker-compose up
 ```
 XDebug is enabled by default
 
-Backend file located in 
+Backend file located in:
 ```sh
 src/backend/
 ```
-Run migrations
+Run migrations:
 ```sh
 php artisan migrate
 ```
 
-To run queue jobs
+To run queue jobs:
 ```sh
 php artisan queue:work
 ```
 
 Three endpoint available:
 
-1. List all parse requests
+1. List all parse requests:
 ```sh
    http://localhost:8000/api/parses?per_page=20
 ```
-2. Create new parse request
+2. Create new parse request:
 ```sh
    http://localhost:8000/api/parses
 ```
@@ -42,7 +42,7 @@ Example passed data:
     ]
 }
 ```
-3. List parsed data results
+3. List parsed data results:
 ```sh
    http://localhost:8000/api/parses
 ```
