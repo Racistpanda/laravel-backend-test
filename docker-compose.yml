@@ -1,0 +1,49 @@
+version: "3.8"
+services:
+
+  #laravel App
+  backend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: laravel-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./src/backend:/var/www
+    networks:
+      - network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command:
+      - sh -c "/var/run.sh && exec myexecutable"
+  
+  #Nginx Service
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf.d:/etc/nginx/conf.d/
+    networks:
+      - network
+
+  #Mysql service
+  db:
+    image: mysql:8
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: project
+      MYSQL_USER: project
+    ports:
+      - "3306:3306"
+    networks:
+      - network
+      
+networks:
+  network:
+    driver: bridge
