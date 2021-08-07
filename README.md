@@ -8,7 +8,7 @@ Backend file located in
 ```sh
 src/backend/
 ```
-Migrate migrations
+Run migrations
 ```sh
 php artisan migrate
 ```
