@@ -15,8 +15,6 @@ services:
       - network
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    command:
-      - sh -c "/var/run.sh && exec myexecutable"
   
   #Nginx Service
   nginx:
