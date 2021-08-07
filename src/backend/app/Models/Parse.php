@@ -25,7 +25,7 @@ class Parse extends Model
     public function percentageDone()
     {
          return DB::table($this->table)
-            ->select(DB::raw('100 * count(finished.id) / count(all.id) as count'))
+            ->select(DB::raw('100 * count(finished.id) / count(all.id) as percentage'))
             ->leftJoin('parse_data as all', 'parse.id', '=', 'all.parse_id')
             ->leftJoin('parse_data as finished', function ($join) {
                 $join

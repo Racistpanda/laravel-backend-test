@@ -18,7 +18,7 @@ class ParseResource extends JsonResource
             'id' => $this->id,
             'tag' => $this->tag,
             'data' => ParseDataResource::collection($this->parseData),
-            'done_percentage' => $this->percentageDone(),
+            'done' => $this->percentageDone(),
             'created_at' => $this->created_at,
         ];
     }

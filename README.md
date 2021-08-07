@@ -50,4 +50,4 @@ Example passed data:
 NOTICE: 
 I now realise that job progress
 isn't what was asked but added a "sort of" progress checker.
-Also, I normally wouldn't put that sort of "heavy" query in listing, but it was a quick make shift solution.
+Also, I normally wouldn't put that sort of "heavy" query in listing if possible, but it was a quick make shift solution.
