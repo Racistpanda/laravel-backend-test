@@ -49,5 +49,5 @@ Example passed data:
 
 NOTICE: 
 I now realise that job progress
-isn't what was asked but added a "sort of" progress checker.
+isn't what was asked but added a "sort of" progress percentage.
 Also, I normally wouldn't put that sort of "heavy" query in listing if possible, but it was a quick make shift solution.
