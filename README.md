@@ -20,7 +20,7 @@ php artisan queue:work
 
 Three endpoint available:
 
-1. List current parse request
+1. List all parse requests
 ```sh
    http://localhost:8000/api/parses?per_page=20
 ```
