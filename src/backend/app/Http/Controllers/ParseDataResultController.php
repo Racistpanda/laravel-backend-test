@@ -26,9 +26,11 @@ class ParseDataResultController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, ParseDataCreator $parseDataCreator)
     {
-        throw new \RuntimeException('Not implemented');
+        $result = $parseDataCreator->create($request);
+        
+        return ParseDataResultResource::create($resut);
     }
 
     /**
